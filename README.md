@@ -1,6 +1,5 @@
-[![Build Status](https://app.travis-ci.com/stojkovm/isa-deployment-2021.svg?branch=master)](https://app.travis-ci.com/stojkovm/isa-deployment-2021)
-[![CircleCI](https://circleci.com/gh/stojkovm/isa-deployment-2021/tree/main.svg?style=svg)](https://circleci.com/gh/stojkovm/isa-deployment-2021/tree/main)
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=stojkovm_isa-deployment-2021)
+[![CircleCI](https://circleci.com/gh/stojkovm/isa-deployment-test/tree/master.svg?style=svg)](https://circleci.com/gh/stojkovm/isa-deployment-test/tree/master)
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=stojkovm_isa-deployment-test)
 
 Uputstvo za povezivanje Spring Boot projekta sa GitHuba sa SonarCloud, TravisCI/CircleCI i Heroku servisima.
 Ovo je okvirno uputstvo koje možda neće svima odraditi posao.
