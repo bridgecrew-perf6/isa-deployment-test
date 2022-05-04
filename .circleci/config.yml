@@ -30,6 +30,22 @@ jobs:
           name: Analyze on SonarCloud
           command: mvn sonar:sonar -Dsonar.projectKey=$PROJECT_KEY -Dsonar.organization=stojkovm-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
 
+  deploy:
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      # Use mvn clean and package as the standard maven build phase
+      - run:
+          name: Checkout
+          command: git checkout main
+      # Then run your tests!
+      - run:
+          name: Heroku Remote
+          command: heroku git:remote -a isa-deployment-test
+      - run:
+          name: Heroku Push
+          command: git push heroku main:main
+
 orbs:
   heroku: circleci/heroku@1.2.6
   sonarcloud: sonarsource/sonarcloud@1.0.3
