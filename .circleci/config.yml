@@ -40,14 +40,14 @@ jobs:
       # Use mvn clean and package as the standard maven build phase
       - run:
           name: Checkout
-          command: git checkout master
+          command: git checkout main
       # Then run your tests!
       - run:
           name: Heroku Remote
           command: heroku git:remote -a isa-deployment-test
       - run:
           name: Heroku Push
-          command: git push heroku master:main
+          command: git push heroku main:main
 
 orbs:
   heroku: circleci/heroku@1.2.6
@@ -58,6 +58,6 @@ workflows:
   heroku_deploy:
     jobs:
       - build-and-test
-      - deploy:
+      - heroku/deploy-via-git:
           requires:
             - build-and-test
